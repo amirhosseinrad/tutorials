@@ -13,19 +13,13 @@ public class Person implements Cloneable {
      String firstname;
      String lastname;
      Address address;
-
     Person(Person person) {
         String fname = person.firstname;
         String lname = person.lastname;
-        this.address = new Address(person.address); // create a new Address instance
+        this.address = new Address(person.address);
     }
-
-
-
     @Override
     protected Object clone() throws CloneNotSupportedException {
         return super.clone();
     }
-
-
 }

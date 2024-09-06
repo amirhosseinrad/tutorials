@@ -1,5 +1,4 @@
 package com.example.javadeepandshadowcopy;
-
 import lombok.*;
 
 @AllArgsConstructor

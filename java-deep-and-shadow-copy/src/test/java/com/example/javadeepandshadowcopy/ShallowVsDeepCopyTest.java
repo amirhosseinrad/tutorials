@@ -6,18 +6,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
 public class ShallowVsDeepCopyTest {
-
     @Test
     public void testShallowCopy() throws CloneNotSupportedException {
-
         Address address = new Address("Iran", "Tehran");
         Person person = new Person("John", "Doe", address);
         Person shallowCopy = new Person(person);
         shallowCopy.getAddress().setCity("Shiraz");
         assertEquals("Shiraz", person.getAddress().getCity());
-
     }
-
     @Test
     public void testDeepCopy() {
         Address address = new Address("Iran", "Tehran");
@@ -25,6 +21,5 @@ public class ShallowVsDeepCopyTest {
         Person deepCopy = new Person(person);
         deepCopy.getAddress().setCity("Shiraz");
         assertEquals("Tehran", person.getAddress().getCity());
-
     }
 }
